@@ -54,6 +54,7 @@ for review in reviews:
         By.XPATH, './/span[contains(@class, "kvMYJc")]'
     ).get_attribute("aria-label")
 
+    # Use try-except to handle missing review text
     try:
         review_text = review.find_element(
             By.XPATH, './/span[contains(@class, "wiI7pd")]'
